@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>ASOS</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@10.15.5/dist/sweetalert2.min.css">
+  </head>
+
+<body class="w3-content" style="max-width:1200px">
+
+<!-- Sidebar/menu -->
+
+<nav class="w3-sidebar w3-collapse w3-top" style="z-index:3;width:250px;background-color:#f3caa8;" id="mySidebar">
+  
+  <div class="w3-container w3-display-container w3-padding-16">
+    <i onclick="w3_close()" class="fa fa-remove w3-hide-large w3-button w3-display-topright"></i>
+    <img src="img\Asos-logo.jpg" style="width: 120%; padding-right: 20%;" />
+  </div>
+  
+  <div class="w3-padding-5 w3-large w3-text-grey" style="font-weight:bold">
+    <a onclick="myAccFunc1()" href="javascript:void(0)" class="w3-button w3-block w3-white w3-left-align" id="myBtn">
+      Boys <i class="fa fa-caret-down"></i>
+    </a>
+    <div id="demoAcc" class="w3-bar-block w3-hide w3-padding-large w3-medium">
+      <a href="#trousers" class="w3-bar-item w3-button w3-light-grey"><i class="fa fa-caret-right w3-margin-right"></i>TROUSERS</a>
+      <a href="#sweaters" class="w3-bar-item w3-button">SWEATERS</a>
+    </div>
+  </div>
+
+  <div class="w3-padding-5 w3-large w3-text-grey" style="font-weight:bold">
+    <a onclick="myAccFunc2()" href="javascript:void(0)" class="w3-button w3-block w3-white w3-left-align" id="girls">
+      Girls <i class="fa fa-caret-down"></i>
+    </a>
+    <div id="demoAc" class="w3-bar-block w3-hide w3-padding-large w3-medium">
+      <a href="#dresses" class="w3-bar-item w3-button w3-light-grey"><i class="fa fa-caret-right w3-margin-right"></i>DRESSES</a>
+      <a href="#heels" class="w3-bar-item w3-button">HEELS</a>
+    </div>
+  </div>
+
+  <div class="w3-padding-5 w3-large w3-text-grey" style="font-weight:bold">
+    <a  href="#payment" class="w3-button w3-block w3-white w3-left-align " id="myBtn1" >
+      Payment
+    </a>
+  </div>
+
+  <div class="w3-padding-5 w3-large w3-text-grey" style="font-weight:bold">
+    <a href="#footer2" onclick="myAccFunc1()" href="javascript:void(0)" class="w3-button w3-block w3-white w3-left-align" id="myBtn">
+      About Us 
+    </a>
+  </div>
+  
+</nav>
+
+
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:250px">
+
+  <!-- Push down content on small screens -->
+  <div class="w3-hide-large" style="margin-top:83px"></div>
+  
+  <!-- Top header -->
+  <header class="w3-container w3-xlarge">
+    <p class="w3-right">
+      <i  style="font-size: 100% ">Discover the latest news of the shop !</i>
+      <i class="fa fa-search"></i>
+    </p>
+  </header>
+
+  <!-- Image header -->
+
+  <div class="w3-display-container w3-container">
+    <img src="img\photo1.jpg" alt="Jeans" style="width:100%">
+    <div class="w3-display-topleft w3-text-white" style="padding:24px 48px">
+      <h1 class="w3-jumbo w3-hide-small">Welcome !</h1>
+      <h1 class="w3-hide-large w3-hide-medium">New arrivals</h1>
+      <h1 class="w3-hide-small">COLLECTION 2023</h1>
+      <p><a href="#boys" class="w3-button w3-black w3-padding-large w3-large">SHOP NOW</a></p>
+    </div>
+  </div>
+
+  <br>
+
+  <div class="w3-container w3-text-grey" id="boys">
+    <h2 class="w3-hide-small" align="center">BOYS COLLECTION</h2>
+
+    <div class="w3-container w3-text-grey" id="trousers">
+      <h3 class="w3-hide-small" align="center">TROUSERS</h3>
+      
+      <div class="w3-row">
+
+      <div class="w3-col l3 s6">
+        <div class="w3-container">
+          <div class="w3-display-container">
+            <img src="img\jean1.png" style="width:100%">
+            <span class="w3-tag w3-display-topleft">New</span>
+            <div class="w3-display-middle w3-display-hover">
+              <button class="w3-button w3-brown" id="moreDetailsButton1">More Details</button>
+              <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.15.5/dist/sweetalert2.min.js"></script>
+                        <script>
+                          const moreDetailsButton1 = document.getElementById('moreDetailsButton1');
+
+                          moreDetailsButton1.addEventListener('click', function() {
+                            Swal.fire({
+                              title: 'More Details',
+                              text: "Levi's - 501 '54 - Jean droit - Noir"+
+                              " , "+"$130.00"+" , "+"Free Delivery.",
+                              icon: 'info',
+                              confirmButtonText: 'BUY NOW '
+                            });
+                          });
+                        </script>
+          </div>
+
+          <p>Mega Ripped Jeans
+            <br>
+          <b>$130.00</b>
+          </p>
+          <button class="w3-button w3-black" data-title="Mega Ripped Jeans" data-price="130.00" >Buy Now <i class="fa fa-shopping-cart"></i></button>
+        </div>
+      </div>
+      </div>
+
+
+      <div class="w3-col l3 s6">
+        <div class="w3-container">
+          <div class="w3-display-container">
+            <img src="img\jean2.png" style="width:100%">
+            <span class="w3-tag w3-display-topleft">New</span>
+            <div class="w3-display-middle w3-display-hover">
+              <button class="w3-button w3-brown" id="moreDetailsButton2">More Details</button>
+              <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.15.5/dist/sweetalert2.min.js"></script>
+                        <script>
+                          const moreDetailsButton2 = document.getElementById('moreDetailsButton2');
+
+                          moreDetailsButton2.addEventListener('click', function() {
+                            Swal.fire({
+                              title: 'More Details',
+                              text: "Levi's 511 slim fit jeans in mid blue wash"+
+                              " , "+"$166.00"+" , "+"Free Delivery.",
+                              icon: 'info',
+                              confirmButtonText: 'BUY NOW '
+                            });
+                          });
+                        </script>
+          </div>
+
+          <p>Levi's 511 slim fit jeans in mid blue wash
+            <br>
+          <b id="prix1">$166.00</b>
+          </p>
+          <button class="w3-button w3-black" data-title="Levi's 511 slim fit jeans in mid blue wash" data-price="166.00">Buy Now <i class="fa fa-shopping-cart"></i></button>
+        </div>
+      </div>
+      </div>
+
+
+      <div class="w3-col l3 s6">
+        <div class="w3-container">
+          <div class="w3-display-container">
+            <img src="img\jean3.png" style="width:100%">
+            <span class="w3-tag w3-display-topleft">New</span>
+            <div class="w3-display-middle w3-display-hover">
+              <button class="w3-button w3-brown" id="moreDetailsButton3">More Details</button>
+              <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.15.5/dist/sweetalert2.min.js"></script>
+                        <script>
+                          const moreDetailsButton3 = document.getElementById('moreDetailsButton3');
+
+                          moreDetailsButton3.addEventListener('click', function() {
+                            Swal.fire({
+                              title: 'More Details',
+                              text: "Only & Sons loom slim fit jeans in mid blue"+
+                              " , "+"$33.16"+" , "+"Free Delivery.",
+                              icon: 'info',
+                              confirmButtonText: 'BUY NOW '
+                            });
+                          });
+                        </script>
+          </div>
+
+          <p>Only & Sons loom slim fit jeans in mid blue
+            <br>
+          <b id="prix1">$33.16</b>
+          </p>
+          <button class="w3-button w3-black" data-title="Only & Sons loom slim fit jeans in mid blue" data-price="33.16">Buy Now <i class="fa fa-shopping-cart"></i></button>
+        </div>
+      </div>
+      </div>
+
+      <div class="w3-col l3 s6">
+        <div class="w3-container">
+          <div class="w3-display-container">
+            <img src="img\jean4.png" style="width:100%">
+            <span class="w3-tag w3-display-topleft">New</span>
+            <div class="w3-display-middle w3-display-hover">
+              <button class="w3-button w3-brown" id="moreDetailsButton4">More Details</button>
+              <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.15.5/dist/sweetalert2.min.js"></script>
+                        <script>
+                          const moreDetailsButton4 = document.getElementById('moreDetailsButton4');
+
+                          moreDetailsButton.addEventListener('click', function() {
+                            Swal.fire({
+                              title: 'More Details',
+                              text: "Levi's 512 slim taper jeans in light blue wash"+
+                              " , "+"$127.00"+" , "+"Free Delivery.",
+                              icon: 'info',
+                              confirmButtonText: 'BUY NOW '
+                            });
+                          });
+                        </script>
+          </div>
+
+          <p>Levi's 512 slim taper jeans in light blue wash
+            <br>
+          <b>$127.00</b>
+          </p>
+          <button class="w3-button w3-black" data-title="Levi's 512 slim taper jeans in light blue wash" data-price="127.00">Buy Now <i class="fa fa-shopping-cart"></i></button>
+        </div>
+      </div>
+      </div>
+    </div>
+<br><br><br><br>
+<!--  sweaters-->
+
+    <div class="w3-container w3-text-grey" id="sweaters">
+      <h3 class="w3-hide-small" align="center">SWEATERS</h3>
+
+      <div class="w3-row">
+
+        <div class="w3-col l3 s6">
+          <div class="w3-container">
+            <div class="w3-display-container">
+              <img src="img\jean1.png" style="width:100%">
+              <span class="w3-tag w3-display-topleft">New</span>
+              <div class="w3-display-middle w3-display-hover">
+                <button class="w3-button w3-brown" id="moreDetailsButton5">More Details</button>
+                <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.15.5/dist/sweetalert2.min.js"></script>
+                          <script>
+                            const moreDetailsButton5 = document.getElementById('moreDetailsButton5');
+  
+                            moreDetailsButton5.addEventListener('click', function() {
+                              Swal.fire({
+                                title: 'More Details',
+                                text: "Only & Sons textured jumper with crew neck in wine"+
+                                " , "+"$14.21"+" , "+"Free Delivery.",
+                                icon: 'info',
+                                confirmButtonText: 'BUY NOW '
+                              });
+                            });
+                          </script>
+            </div>
+  
+            <p>Only & Sons textured jumper with crew neck in wine
+              <br>
+            <b>$14.21</b>
+            </p>
+            <button class="w3-button w3-black" data-title="Only & Sons textured jumper with crew neck in wine" data-price="14.21" >Buy Now <i class="fa fa-shopping-cart"></i></button>
+          </div>
+        </div>
+        </div>
+  
+  
+        <div class="w3-col l3 s6">
+          <div class="w3-container">
+            <div class="w3-display-container">
+              <img src="img\pull1.png" style="width:100%">
+              <span class="w3-tag w3-display-topleft">New</span>
+              <div class="w3-display-middle w3-display-hover">
+                <button class="w3-button w3-brown" id="moreDetailsButton6">More Details</button>
+                <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.15.5/dist/sweetalert2.min.js"></script>
+                          <script>
+                            const moreDetailsButton6 = document.getElementById('moreDetailsButton6');
+  
+                            moreDetailsButton6.addEventListener('click', function() {
+                              Swal.fire({
+                                title: 'More Details',
+                                text: "River Island roll neck knitted jumper in ecru"+
+                                " , "+"$17.37"+" , "+"Free Delivery.",
+                                icon: 'info',
+                                confirmButtonText: 'BUY NOW '
+                              });
+                            });
+                          </script>
+            </div>
+  
+            <p>River Island roll neck knitted jumper in ecru
+              <br>
+            <b id="prix1">$17.37</b>
+            </p>
+            <button class="w3-button w3-black" data-title="River Island roll neck knitted jumper in ecru" data-price="17.37">Buy Now <i class="fa fa-shopping-cart"></i></button>
+          </div>
+        </div>
+        </div>
+  
+  
+        <div class="w3-col l3 s6">
+          <div class="w3-container">
+            <div class="w3-display-container">
+              <img src="img\pull2.png" style="width:100%">
+              <span class="w3-tag w3-display-topleft">New</span>
+              <div class="w3-display-middle w3-display-hover">
+                <button class="w3-button w3-brown" id="moreDetailsButton7">More Details</button>
+                <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.15.5/dist/sweetalert2.min.js"></script>
+                          <script>
+                            const moreDetailsButton7= document.getElementById('moreDetailsButton7');
+  
+                            moreDetailsButton7.addEventListener('click', function() {
+                              Swal.fire({
+                                title: 'More Details',
+                                text: "PS Paul Smith logo jumper in teal green"+
+                                " , "+"$198.00"+" , "+"Free Delivery.",
+                                icon: 'info',
+                                confirmButtonText: 'BUY NOW '
+                              });
+                            });
+                          </script>
+            </div>
+  
+            <p>PS Paul Smith logo jumper in teal green
+              <br>
+            <b id="prix1">$198.00</b>
+            </p>
+            <button class="w3-button w3-black" data-title="PS Paul Smith logo jumper in teal green" data-price="198.00">Buy Now <i class="fa fa-shopping-cart"></i></button>
+          </div>
+        </div>
+        </div>
+  
+        <div class="w3-col l3 s6">
+          <div class="w3-container">
+            <div class="w3-display-container">
+              <img src="img\pull3.png" style="width:100%">
+              <span class="w3-tag w3-display-topleft">New</span>
+              <div class="w3-display-middle w3-display-hover">
+                <button class="w3-button w3-brown" id="moreDetailsButton8">More Details</button>
+                <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.15.5/dist/sweetalert2.min.js"></script>
+                          <script>
+                            const moreDetailsButton8 = document.getElementById('moreDetailsButton8');
+  
+                            moreDetailsButton8.addEventListener('click', function() {
+                              Swal.fire({
+                                title: 'More Details',
+                                text: "ASOS DESIGN muscle fit ribbed roll neck jumper in black and white twist"+
+                                " , "+"$13.42"+" , "+"Free Delivery.",
+                                icon: 'info',
+                                confirmButtonText: 'BUY NOW '
+                              });
+                            });
+                          </script>
+            </div>
+  
+            <p>ASOS DESIGN muscle fit ribbed roll neck jumper in black and white twist
+              <br>
+            <b>$13.42</b>
+            </p>
+            <button class="w3-button w3-black" data-title="ASOS DESIGN muscle fit ribbed roll neck jumper in black and white twist" data-price="13.42">Buy Now <i class="fa fa-shopping-cart"></i></button>
+          </div>
+        </div>
+        </div>
+      </div>
+
+
+
+    </div>
+
+  </div>
+
+  
+
+
+
+
+
+<!--   ********************************************************************* girls -->
+
+<div class="w3-container w3-text-grey" id="girls">
+  <h2 class="w3-hide-small" align="center">GIRLS COLLECTION</h2>
+
+  <div class="w3-container w3-text-grey" id="dresses">
+    <h3 class="w3-hide-small" align="center">DRESSES</h3>
+    
+    <div class="w3-row">
+
+    <div class="w3-col l3 s6">
+      <div class="w3-container">
+        <div class="w3-display-container">
+          <img src="img\robe1.png" style="width:100%">
+          <span class="w3-tag w3-display-topleft">New</span>
+          <div class="w3-display-middle w3-display-hover">
+            <button class="w3-button w3-brown" id="moreDetailsButton99">More Details</button>
+            <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.15.5/dist/sweetalert2.min.js"></script>
+                      <script>
+                        const moreDetailsButton99 = document.getElementById('moreDetailsButton99');
+
+                        moreDetailsButton99.addEventListener('click', function() {
+                          Swal.fire({
+                            title: 'More Details',
+                            text: "Levi's - 501 '54 - Jean droit - Noir"+
+                            " , "+"$130.00"+" , "+"Free Delivery.",
+                            icon: 'info',
+                            confirmButtonText: 'BUY NOW '
+                          });
+                        });
+                      </script>
+        </div>
+
+        <p>Mega Ripped Jeans
+          <br>
+        <b>$130.00</b>
+        </p>
+        <button class="w3-button w3-black" data-title="Mega Ripped Jeans" data-price="130.00" >Buy Now <i class="fa fa-shopping-cart"></i></button>
+      </div>
+    </div>
+    </div>
+
+
+    <div class="w3-col l3 s6">
+      <div class="w3-container">
+        <div class="w3-display-container">
+          <img src="img\robe2.png" style="width:100%">
+          <span class="w3-tag w3-display-topleft">New</span>
+          <div class="w3-display-middle w3-display-hover">
+            <button class="w3-button w3-brown" id="moreDetailsButton44">More Details</button>
+            <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.15.5/dist/sweetalert2.min.js"></script>
+                      <script>
+                        const moreDetailsButton44 = document.getElementById('moreDetailsButton44');
+
+                        moreDetailsButton44.addEventListener('click', function() {
+                          Swal.fire({
+                            title: 'More Details',
+                            text: "Levi's 511 slim fit jeans in mid blue wash"+
+                            " , "+"$166.00"+" , "+"Free Delivery.",
+                            icon: 'info',
+                            confirmButtonText: 'BUY NOW '
+                          });
+                        });
+                      </script>
+        </div>
+
+        <p>Levi's 511 slim fit jeans in mid blue wash
+          <br>
+        <b id="prix1">$166.00</b>
+        </p>
+        <button class="w3-button w3-black" data-title="Levi's 511 slim fit jeans in mid blue wash" data-price="166.00">Buy Now <i class="fa fa-shopping-cart"></i></button>
+      </div>
+    </div>
+    </div>
+
+
+    <div class="w3-col l3 s6">
+      <div class="w3-container">
+        <div class="w3-display-container">
+          <img src="img\robe3.png" style="width:100%">
+          <span class="w3-tag w3-display-topleft">New</span>
+          <div class="w3-display-middle w3-display-hover">
+            <button class="w3-button w3-brown" id="moreDetailsButton111">More Details</button>
+            <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.15.5/dist/sweetalert2.min.js"></script>
+                      <script>
+                        const moreDetailsButton111 = document.getElementById('moreDetailsButton111');
+
+                        moreDetailsButton111.addEventListener('click', function() {
+                          Swal.fire({
+                            title: 'More Details',
+                            text: "Only & Sons loom slim fit jeans in mid blue"+
+                            " , "+"$33.16"+" , "+"Free Delivery.",
+                            icon: 'info',
+                            confirmButtonText: 'BUY NOW '
+                          });
+                        });
+                      </script>
+        </div>
+
+        <p>Only & Sons loom slim fit jeans in mid blue
+          <br>
+        <b id="prix1">$33.16</b>
+        </p>
+        <button class="w3-button w3-black" data-title="Only & Sons loom slim fit jeans in mid blue" data-price="33.16">Buy Now <i class="fa fa-shopping-cart"></i></button>
+      </div>
+    </div>
+    </div>
+
+    <div class="w3-col l3 s6">
+      <div class="w3-container">
+        <div class="w3-display-container">
+          <img src="img\robe4.png" style="width:100%">
+          <span class="w3-tag w3-display-topleft">New</span>
+          <div class="w3-display-middle w3-display-hover">
+            <button class="w3-button w3-brown" id="moreDetailsButton121">More Details</button>
+            <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.15.5/dist/sweetalert2.min.js"></script>
+                      <script>
+                        const moreDetailsButton121 = document.getElementById('moreDetailsButton121');
+
+                        moreDetailsButton121.addEventListener('click', function() {
+                          Swal.fire({
+                            title: 'More Details',
+                            text: "Levi's 512 slim taper jeans in light blue wash"+
+                            " , "+"$127.00"+" , "+"Free Delivery.",
+                            icon: 'info',
+                            confirmButtonText: 'BUY NOW '
+                          });
+                        });
+                      </script>
+        </div>
+
+        <p>Levi's 512 slim taper jeans in light blue wash
+          <br>
+        <b>$127.00</b>
+        </p>
+        <button class="w3-button w3-black" data-title="Levi's 512 slim taper jeans in light blue wash" data-price="127.00">Buy Now <i class="fa fa-shopping-cart"></i></button>
+      </div>
+    </div>
+    
+  </div>
+
+  </div>
+<br><br><br><br>
+<!--  sweaters-->
+
+  <div class="w3-container w3-text-grey" id="heels">
+    <h3 class="w3-hide-small" align="center">HEELS</h3>
+
+    <div class="w3-row">
+
+      <div class="w3-col l3 s6">
+        <div class="w3-container">
+          <div class="w3-display-container">
+            <img src="img\heel1.png" style="width:100%">
+            <span class="w3-tag w3-display-topleft">New</span>
+            <div class="w3-display-middle w3-display-hover">
+              <button class="w3-button w3-brown" id="moreDetailsButton131">More Details</button>
+              <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.15.5/dist/sweetalert2.min.js"></script>
+                        <script>
+                          const moreDetailsButton131 = document.getElementById('moreDetailsButton131');
+
+                          moreDetailsButton131.addEventListener('click', function() {
+                            Swal.fire({
+                              title: 'More Details',
+                              text: "Only & Sons textured jumper with crew neck in wine"+
+                              " , "+"$14.21"+" , "+"Free Delivery.",
+                              icon: 'info',
+                              confirmButtonText: 'BUY NOW '
+                            });
+                          });
+                        </script>
+          </div>
+
+          <p>Only & Sons textured jumper with crew neck in wine
+            <br>
+          <b>$14.21</b>
+          </p>
+          <button class="w3-button w3-black" data-title="Only & Sons textured jumper with crew neck in wine" data-price="14.21" >Buy Now <i class="fa fa-shopping-cart"></i></button>
+        </div>
+      </div>
+      </div>
+
+
+      <div class="w3-col l3 s6">
+        <div class="w3-container">
+          <div class="w3-display-container">
+            <img src="img\heel2.png" style="width:100%">
+            <span class="w3-tag w3-display-topleft">New</span>
+            <div class="w3-display-middle w3-display-hover">
+              <button class="w3-button w3-brown" id="moreDetailsButton141">More Details</button>
+              <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.15.5/dist/sweetalert2.min.js"></script>
+                        <script>
+                          const moreDetailsButton141 = document.getElementById('moreDetailsButton141');
+
+                          moreDetailsButton141.addEventListener('click', function() {
+                            Swal.fire({
+                              title: 'More Details',
+                              text: "River Island roll neck knitted jumper in ecru"+
+                              " , "+"$17.37"+" , "+"Free Delivery.",
+                              icon: 'info',
+                              confirmButtonText: 'BUY NOW '
+                            });
+                          });
+                        </script>
+          </div>
+
+          <p>River Island roll neck knitted jumper in ecru
+            <br>
+          <b id="prix1">$17.37</b>
+          </p>
+          <button class="w3-button w3-black" data-title="River Island roll neck knitted jumper in ecru" data-price="17.37">Buy Now <i class="fa fa-shopping-cart"></i></button>
+        </div>
+      </div>
+      </div>
+
+
+      <div class="w3-col l3 s6">
+        <div class="w3-container">
+          <div class="w3-display-container">
+            <img src="img\heel3.png" style="width:100%">
+            <span class="w3-tag w3-display-topleft">New</span>
+            <div class="w3-display-middle w3-display-hover">
+              <button class="w3-button w3-brown" id="moreDetailsButton151">More Details</button>
+              <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.15.5/dist/sweetalert2.min.js"></script>
+                        <script>
+                          const moreDetailsButton151= document.getElementById('moreDetailsButton151');
+
+                          moreDetailsButton151.addEventListener('click', function() {
+                            Swal.fire({
+                              title: 'More Details',
+                              text: "PS Paul Smith logo jumper in teal green"+
+                              " , "+"$198.00"+" , "+"Free Delivery.",
+                              icon: 'info',
+                              confirmButtonText: 'BUY NOW '
+                            });
+                          });
+                        </script>
+          </div>
+
+          <p>PS Paul Smith logo jumper in teal green
+            <br>
+          <b id="prix1">$198.00</b>
+          </p>
+          <button class="w3-button w3-black" data-title="PS Paul Smith logo jumper in teal green" data-price="198.00">Buy Now <i class="fa fa-shopping-cart"></i></button>
+        </div>
+      </div>
+      </div>
+
+      <div class="w3-col l3 s6">
+        <div class="w3-container">
+          <div class="w3-display-container">
+            <img src="img\heel4.png" style="width:100%">
+            <span class="w3-tag w3-display-topleft">New</span>
+            <div class="w3-display-middle w3-display-hover">
+              <button class="w3-button w3-brown" id="moreDetailsButton161">More Details</button>
+              <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.15.5/dist/sweetalert2.min.js"></script>
+                        <script>
+                          const moreDetailsButton161 = document.getElementById('moreDetailsButton161');
+
+                          moreDetailsButton161.addEventListener('click', function() {
+                            Swal.fire({
+                              title: 'More Details',
+                              text: "ASOS DESIGN muscle fit ribbed roll neck jumper in black and white twist"+
+                              " , "+"$13.42"+" , "+"Free Delivery.",
+                              icon: 'info',
+                              confirmButtonText: 'BUY NOW '
+                            });
+                          });
+                        </script>
+          </div>
+
+          <p>ASOS DESIGN muscle fit ribbed roll neck jumper in black and white twist
+            <br>
+          <b>$13.42</b>
+          </p>
+          <button class="w3-button w3-black" data-title="ASOS DESIGN muscle fit ribbed roll neck jumper in black and white twist" data-price="13.42">Buy Now <i class="fa fa-shopping-cart"></i></button>
+        </div>
+      </div>
+      </div>
+    </div>
+
+
+
+  </div>
+
+</div>
+
+<!--   ********************************************************************* -->
+
+<br><br><br><br><br>
+
+ <!-- payement section -->
+ <div class="w3-container w3-white w3-padding-32" id="payment" align="center">
+
+  <h3 class="w3-hide-small" ><i class="fa fa-shopping-cart" style="font-size: larger;color:gray"> PAYMENT BASKET</i> </h3>
+  <table id="cartTable" border="4" >
+    <tr>
+      <th>Item Name</th>
+      <th>Price</th>
+    </tr>
+  </table>
+  
+<p>Total Price Before Discount: $<span id="totalPriceBeforeDiscount">0.00</span></p>
+<p>Total Price After Discount: $<span id="totalPriceAfterDiscount">0.00</span></p>
+  
+  <script>
+
+  const buyNowButtons = document.getElementsByClassName('w3-button w3-black');
+  const cartTable = document.getElementById('cartTable');
+  const totalPriceBeforeDiscountLabel = document.getElementById('totalPriceBeforeDiscount');
+  const totalPriceAfterDiscountLabel = document.getElementById('totalPriceAfterDiscount');
+
+  let totalPrice = 0;
+
+  for (let i = 0; i < buyNowButtons.length; i++) {
+    buyNowButtons[i].addEventListener('click', function() {
+      const jeanName = this.dataset.title;
+      const jeanPrice = parseFloat(this.dataset.price);
+      totalPrice += jeanPrice;
+
+      const newRow = document.createElement('tr');
+      newRow.innerHTML = `
+        <td>${jeanName}</td>
+        <td>${jeanPrice}</td>
+      `;
+      cartTable.appendChild(newRow);
+      updateTotalPrice();
+    });
+  }
+
+  function updateTotalPrice() {
+    totalPriceBeforeDiscountLabel.innerText = totalPrice.toFixed(2);
+
+    let discountedPrice = totalPrice;
+    if (totalPrice > 140) {
+      const discount = totalPrice * 0.1; // 10% discount
+      discountedPrice -= discount;
+    }
+
+    totalPriceAfterDiscountLabel.innerText = discountedPrice.toFixed(2);
+  }
+
+  </script>
+
+</div>
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  
+  <div class="w3-container w3-text-black" id="footer2">
+    <h3 class="w3-hide-small" align="center">ABOUT US</h3>
+    <div class="w3-col s4 w3-justify">
+      <h4>Store</h4>
+      <p><i class="fa fa-fw fa-map-marker"></i>ASOS</p>
+      <p><i class="fa fa-fw fa-phone"></i> + 216 98 145 125</p>
+      <p><i class="fa fa-fw fa-envelope"></i> asos_beautiful@gmail.com</p>
+      <h4>We accept</h4>
+      <p><i class="fa fa-fw fa-cc-amex"></i> Amex</p>
+      <p><i class="fa fa-fw fa-credit-card"></i> Credit Card</p>
+      <br>
+      <i class="fa fa-facebook-official w3-hover-opacity w3-large"></i>
+      <i class="fa fa-instagram w3-hover-opacity w3-large"></i>
+      <i class="fa fa-snapchat w3-hover-opacity w3-large"></i>
+      <i class="fa fa-pinterest-p w3-hover-opacity w3-large"></i>
+      <i class="fa fa-twitter w3-hover-opacity w3-large"></i>
+      <i class="fa fa-linkedin w3-hover-opacity w3-large"></i>
+    </div>
+    </div>
+
+
+<script>
+// Accordion 
+function myAccFunc1() {
+  var x = document.getElementById("demoAcc");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else {
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+
+function myAccFunc2() {
+  var x = document.getElementById("demoAc");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else {
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+
+// Click on the "Jeans" link on page load to open the accordion for demo purposes
+document.getElementById("myBtn").click();
+
+
+// Open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
