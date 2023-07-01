@@ -19,7 +19,7 @@
 <nav class="w3-sidebar w3-collapse w3-top" style="z-index:3;width:250px;background-color:#f3caa8;" id="mySidebar">
   
   <div class="w3-container w3-display-container w3-padding-16">
-    <i onclick="w3_close()" class="fa fa-remove w3-hide-large w3-button w3-display-topright"></i>
+    
     <img src="img\Asos-logo.jpg" style="width: 120%; padding-right: 20%;" />
   </div>
   
@@ -688,7 +688,7 @@
   const totalPriceBeforeDiscountLabel = document.getElementById('totalPriceBeforeDiscount');
   const totalPriceAfterDiscountLabel = document.getElementById('totalPriceAfterDiscount');
 
-  let totalPrice = 0;
+  var  totalPrice = 0;
 
   for (let i = 0; i < buyNowButtons.length; i++) {
     buyNowButtons[i].addEventListener('click', function() {
@@ -769,16 +769,8 @@ function myAccFunc2() {
 document.getElementById("myBtn").click();
 
 
-// Open and close sidebar
-function w3_open() {
-  document.getElementById("mySidebar").style.display = "block";
-  document.getElementById("myOverlay").style.display = "block";
-}
- 
-function w3_close() {
-  document.getElementById("mySidebar").style.display = "none";
-  document.getElementById("myOverlay").style.display = "none";
-}
+
+
 
 
 </script>
